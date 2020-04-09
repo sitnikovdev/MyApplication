@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.zovjoin.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
