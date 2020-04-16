@@ -3,6 +3,7 @@ package com.zovjoin;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -17,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
         WebView mywebview = findViewById(R.id.mywebview);
         mywebview.getSettings().setJavaScriptEnabled(true);
+        mywebview.getSettings().setDomStorageEnabled(true);
+        mywebview.getSettings().setLoadsImagesAutomatically(true);
+        mywebview.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         mywebview.loadUrl("https://t.zovjoin.com/");
         mywebview.setWebViewClient(new WebViewClient());
     }
